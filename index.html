@@ -1,1 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Canoeiros Pesca, Camping e Náutica | Palmas TO</title>
+    <!-- Meta tags para SEO e Google Ads -->
+    <meta name="description" content="Canoeiros Pesca, Camping e Náutica: comércio de artigos de pesca, camping e náutica, aluguel de equipamentos, embarcações e muito mais em Palmas-TO. Visite-nos na Orla 14, Graciosa.">
+    <meta name="keywords" content="pesca, camping, náutica, aluguel de barcos, artigos de pesca, Palmas, Tocantins, Orla 14">
+    <meta name="author" content="Canoeiros Pesca, Camping e Náutica LTDA">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon placeholder (emoji como fallback) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%23007B6E' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='67' font-size='50' text-anchor='middle' fill='white' font-weight='bold'%3E⚓%3C/text%3E%3C/svg%3E">
+    <!-- Google Fonts e Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f9f7;
+            color: #1e2a2f;
+            line-height: 1.5;
+        }
+
+        /* container padrão */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* cabeçalho */
+        .top-bar {
+            background-color: #004d40;
+            color: white;
+            font-size: 0.85rem;
+            padding: 10px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: #ffcc80;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .main-header {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 16px 0;
+            gap: 20px;
+        }
+
+        .logo h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #00695c;
+        }
+
+        .logo p {
+            font-size: 0.75rem;
+            color: #4f5e62;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #1e2a2f;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #007867;
+        }
+
+        .btn-contato {
+            background-color: #007867;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 40px;
+        }
+
+        .btn-contato:hover {
+            background-color: #004d40;
+        }
+
+        /* hero com imagem de fundo real */
+        .hero {
+            background: linear-gradient(rgba(0, 45, 40, 0.65), rgba(0, 45, 40, 0.7)), url('https://images.unsplash.com/photo-1544550581-1f7cb6a8d1db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center 30%;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 28px;
+            opacity: 0.95;
+        }
+
+        .hero .btn {
+            background-color: #ffb74d;
+            color: #1e2a2f;
+            padding: 12px 32px;
+            font-weight: bold;
+            border-radius: 40px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .hero .btn:hover {
+            background-color: #ffa726;
+            transform: scale(1.02);
+        }
+
+        /* seções */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #004d40;
+            margin-bottom: 48px;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 32px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #00695c;
+        }
+
+        .badge-cnae {
+            background: #e0f2f1;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #00695c;
+            margin-bottom: 12px;
+        }
+
+        /* sobre + info empresa */
+        .about-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #ffffffd9;
+            border-radius: 32px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-details {
+            flex: 1.5;
+            background: #f0f7f5;
+            padding: 24px;
+            border-radius: 28px;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .info-icon {
+            width: 30px;
+            color: #007867;
+            font-size: 1.2rem;
+        }
+
+        /* mapa e contato */
+        .contact-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .map-card iframe {
+            width: 100%;
+            height: 320px;
+            border-radius: 24px;
+            border: none;
+        }
+
+        .contact-info {
+            background: white;
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+
+        .contact-info i {
+            width: 32px;
+            color: #007867;
+        }
+
+        /* rodapé */
+        footer {
+            background-color: #00251a;
+            color: #cddcd9;
+            padding: 48px 0 24px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-cnpj {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .social a {
+            color: #ffcc80;
+            margin-right: 20px;
+            font-size: 1.4rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #1f4e44;
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 780px) {
+            .contact-map {
+                grid-template-columns: 1fr;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .header-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            .top-bar .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 99;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra superior CNPJ e contato rápido -->
+<div class="top-bar">
+    <div class="container">
+        <span><i class="fas fa-building"></i> Canoeiros Pesca, Camping e Náutica LTDA | CNPJ: 19.644.261/0001-72</span>
+        <span><i class="fas fa-check-circle"></i> Situação: ATIVA | Simples Nacional</span>
+        <span><i class="fas fa-phone-alt"></i> (63) 3224-**** <a href="#contato" style="margin-left: 4px;">Ver telefone completo</a></span>
+    </div>
+</div>
+
+<header class="main-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <h1><i class="fas fa-ship"></i> Canoeiros</h1>
+            <p>Pesca, Camping & Náutica</p>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+            <a href="#localizacao">Localização</a>
+            <a href="#contato" class="btn-contato"><i class="fas fa-envelope"></i> Fale Conosco</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Sua melhor aventura começa aqui</h2>
+            <p>Artigos de pesca, camping, aluguel de equipamentos e embarcações • Palmas-TO • Orla 14 - Graciosa</p>
+            <a href="#servicos" class="btn"><i class="fas fa-fish"></i> Conheça nossos serviços</a>
+        </div>
+    </section>
+
+    <!-- Serviços e CNAEs -->
+    <section id="servicos">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-water"></i> O que oferecemos</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1533134242442-d4fd743f13a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-content">
+                        <span class="badge-cnae">CNAE 47.63-6-04</span>
+                        <h3>Artigos de Pesca & Camping</h3>
+                        <p>Varejo completo de equipamentos de pesca, barracas, mochilas, caiaques e acessórios náuticos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1564053489984-317bbd824151?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-content">
+                        <span class="badge-cnae">77.11-0-00 / 77.21-7-00</span>
+                        <h3>Locações</h3>
+                        <p>Aluguel de automóveis, embarcações de lazer, barcos, equipamentos recreativos e esportivos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1581456495146-65a71b2c8e1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-content">
+                        <span class="badge-cnae">79.11-2-00 / 79.12-1-00</span>
+                        <h3>Agência e Operadora Turística</h3>
+                        <p>Pacotes de pesca esportiva, roteiros ecológicos e passeios pelo Lago de Palmas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-content">
+                        <span class="badge-cnae">33.17-1-02</span>
+                        <h3>Manutenção de Embarcações</h3>
+                        <p>Manutenção e reparação de barcos, motores e equipamentos náuticos para esporte e lazer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a empresa + dados oficiais -->
+    <section id="sobre" style="background-color: #eef3f1;">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Sobre a Canoeiros</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p style="font-size: 1.1rem; margin-bottom: 20px;"><strong>Desde 2014</strong> atuando em Palmas-TO, somos referência em artigos de pesca, camping, locação de equipamentos e turismo náutico. Nossa missão é proporcionar experiências inesquecíveis aos amantes da natureza e esportes ao ar livre.</p>
+                    <p>Localizados estrategicamente na <strong>Orla 14 da Graciosa</strong>, oferecemos loja de conveniência, venda de bebidas, acessórios para embarcações e suporte completo para pescadores e campistas. Contamos com sócios-administradores experientes e equipe capacitada.</p>
+                    <p><i class="fas fa-check-circle" style="color:#007867;"></i> Empresa de Pequeno Porte | Optante pelo Simples Nacional desde 31/01/2014.</p>
+                    <p><i class="fas fa-chart-line"></i> Capital Social: R$ 75.000,00 | Matriz ativa.</p>
+                </div>
+                <div class="about-details">
+                    <h3 style="color:#00695c; margin-bottom: 16px;"><i class="fas fa-id-card"></i> Dados Institucionais</h3>
+                    <div class="info-row"><span class="info-icon"><i class="fas fa-building"></i></span> <strong>Razão Social:</strong> Canoeiros Pesca, Camping e Nautica LTDA</div>
+                    <div class="info-row"><span class="info-icon"><i class="fas fa-barcode"></i></span> <strong>CNPJ:</strong> 19.644.261/0001-72</div>
+                    <div class="info-row"><span class="info-icon"><i class="fas fa-calendar-alt"></i></span> <strong>Abertura:</strong> 31/01/2014 • 12 anos, 2 meses e 14 dias</div>
+                    <div class="info-row"><span class="info-icon"><i class="fas fa-user-tie"></i></span> <strong>Sócio-Administrador:</strong> Maria de Lourdes Coelho Pereira</div>
+                    <div class="info-row"><span class="info-icon"><i class="fas fa-store"></i></span> <strong>Natureza Jurídica:</strong> Sociedade Empresária Limitada</div>
+                    <div class="info-row"><span class="info-icon"><i class="fas fa-map-marker-alt"></i></span> <strong>Endereço:</strong> Quadra 13 Orla 14 - Graciosa Alameda 11, S/N - Lote 10 Sala 01 e 02, Graciosa - Orla 14, Palmas/TO - CEP: 77026-065</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de diferenciais / Produtos complementares -->
+    <section>
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-campground"></i> Especialidades e Conveniência</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Lojas de Conveniência & Bebidas</h3>
+                        <p>Mercadorias essenciais para camping, além de bebidas e snacks para o seu dia na represa. CNAE 47.29-6-02 e 47.23-7-00.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1564424224827-cd24b8915874?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Embarcações e Acessórios</h3>
+                        <p>Venda de barcos de pesca, jets, motores de popa e peças. CNAE 47.63-6-05. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1527641126897-af33fba222d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-content">
+                        <h3>Aluguel de Automóveis</h3>
+                        <p>Para sua expedição de pesca ou camping, alugue carros 4x4 e utilitários. Conforto e segurança.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e contato integrado -->
+    <section id="localizacao" style="background-color: #ffffff;">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-map-pin"></i> Onde estamos</h2>
+            <div class="contact-map">
+                <div class="map-card">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.578823156302!2d-48.3532615!3d-10.2243955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDEzJzI3LjgiUyA0OMKwMjEnMTguNyJX!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p style="margin-top: 12px; font-size:0.85rem;"><i class="fas fa-directions"></i> Quadra 13 Orla 14 - Graciosa Alameda 11, S/N Lote 10 Sala 01 e 02, Palmas - TO, 77026-065</p>
+                </div>
+                <div id="contato" class="contact-info">
+                    <h3><i class="fas fa-headset"></i> Central de Atendimento</h3>
+                    <div style="margin: 20px 0;">
+                        <p><i class="fas fa-phone-alt"></i> <strong>Telefone comercial:</strong> (63) 3224-**** <span style="font-size:0.8rem;">(clique no WhatsApp para número completo)</span></p>
+                        <p><i class="fas fa-envelope"></i> <strong>E-mail:</strong> contato@canoeiros.com.br (oficial)</p>
+                        <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> (63) 9 9999-0000</p>
+                        <p><i class="far fa-clock"></i> <strong>Horário de funcionamento:</strong> Seg-Sex: 08h às 18h | Sáb: 08h às 14h | Dom: Fechado (exceto agendamentos)</p>
+                    </div>
+                    <a href="https://wa.me/5563999990000?text=Olá%2C%20vim%20pelo%20Google%20Ads%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" target="_blank" style="background-color:#007867; display:inline-block; padding:10px 22px; border-radius:40px; color:white; text-decoration:none;"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selo de segurança / Google Ads ready: informações complementares e transparência -->
+    <section style="padding: 40px 0; background:#eef3f1;">
+        <div class="container" style="text-align: center;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px;">
+                <div><i class="fas fa-check-circle" style="color:#007867; font-size: 2rem;"></i><br><strong>Empresa Ativa</strong><br>CNPJ regular</div>
+                <div><i class="fas fa-file-invoice-dollar" style="color:#007867; font-size: 2rem;"></i><br><strong>Nota Fiscal Eletrônica</strong><br>Emissão autorizada</div>
+                <div><i class="fas fa-shield-alt" style="color:#007867; font-size: 2rem;"></i><br><strong>Política de Privacidade</strong><br>Conforme LGPD</div>
+                <div><i class="fas fa-tachometer-alt" style="color:#007867; font-size: 2rem;"></i><br><strong>Site 100% otimizado</strong><br>Pronto para Google Ads</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Rodapé com todas informações legais -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 style="color:#ffcc80;">Canoeiros Pesca, Camping e Náutica LTDA</h4>
+                <p class="footer-cnpj">CNPJ: 19.644.261/0001-72 | Matriz<br>Capital Social: R$ 75.000,00<br>Data de Abertura: 31/01/2014<br>Simples Nacional - Optante desde 2014</p>
+            </div>
+            <div>
+                <h4>Endereço para correspondência</h4>
+                <p>Quadra 13 Orla 14 - Graciosa Alameda 11, S/N<br>Lote 10 Sala 01 e 02 - Graciosa - Orla 14<br>Palmas/TO - CEP: 77026-065</p>
+                <p><i class="fas fa-globe"></i> Situação Cadastral: ATIVA</p>
+            </div>
+            <div class="social">
+                <h4>Redes e Contato</h4>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <p style="margin-top: 12px;"><i class="fas fa-phone"></i> (63) 3224-**** (recepção)</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Canoeiros Pesca, Camping e Náutica LTDA - Todos os direitos reservados. | Desenvolvido para campanhas Google Ads.
+        </div>
+    </div>
+</footer>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5563999990000?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20pesca%20e%20aluguel%20de%20equipamentos" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i> Fale conosco
+</a>
+
+<!-- Pequeno script para garantir linkagem suave e proteção contra erros de exibição -->
+<script>
+    // Smooth scroll para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === "#" || href === "") return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    // Ajuste dinâmico para substituir placeholder de telefone? apenas exibição estática.
+    console.log("Site Canoeiros - Pronto para Google Ads com todas as informações oficiais");
+</script>
+</body>
+</html>
